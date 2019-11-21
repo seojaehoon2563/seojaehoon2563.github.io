@@ -58,10 +58,45 @@
     animation: 20s slidy ease-in-out infinite;
     }
     </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script> 
+<script language="JavaScript">
+    <!--
+        function setCookie( name, value, expiredays ) {
+            var todayDate = new Date();
+            todayDate.setDate( todayDate.getDate() + expiredays ); 
+            document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+        }
+        function closePop() {
+            if ( document.pop_form.chkbox.checked ){
+                setCookie( "maindiv", "done" , 1 );
+            }
+            document.all['layer_popup'].style.visibility = "hidden";
+        }
+    //--> 
+</script>
 </head>
 
 <body id="page-top">
-
+<div id="layer_popup" style="visibility: visible;">
+    <p>타이틀영역입니다,</p>
+    <p>본문영역입니다.</p>
+ 
+    <div class="close">
+        <form name="pop_form">
+            <div id="check"><input type="checkbox" name="chkbox" value="checkbox" style="margin-right:5px;">오늘 하루동안 보지 않기</div>
+            <div id="close" style="margin:auto;"><a href="javascript:closePop();">닫기</a></div>
+        </form>
+    </div>
+</div>
+<script language="Javascript">
+    cookiedata = document.cookie;   
+    if ( cookiedata.indexOf("maindiv=done") < 0 ){     
+        document.all['layer_popup'].style.visibility = "visible";
+    }
+    else {
+        document.all['layer_popup'].style.visibility = "hidden";
+    }
+</script>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">멋쟁이 사자처럼 - 서재훈</span>
