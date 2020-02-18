@@ -2,6 +2,21 @@
 <html lang="en">
 
 <head>
+  <script type="text/javascript">  
+5       function getCookie(name) {  
+6         var cookie = document.cookie;  
+7         if (document.cookie != "") {  
+8           var cookie_array = cookie.split("; ");  
+9           for ( var index in cookie_array) {  
+10             var cookie_name = cookie_array[index].split("=");  
+11             if (cookie_name[0] == "popupYN") {  
+12               return cookie_name[1]; } } }  
+13         return ; }  
+14       function openPopup(url) {  
+15         var cookieCheck = getCookie("popupYN");  
+16         if (cookieCheck != "N")  
+17           window.open(url, '', 'width=769,height=635,left=0,top=0') }  
+18     </script> 
   <link rel="shortcut icon" href="/img/27750446_1757289147911238_5903040618479864194_n.jpg">
   <title>멋쟁이 사자처럼 - 서재훈</title>
   <!--Bootstrap core CSS -->
@@ -265,35 +280,6 @@
             document.getElementById('result').value = "";
         }
   </script>
-<script>
-      jQuery(document).ready(function($) {
-      pevent();
-  });
-
-  function pevent(){
-      function getCookie(name){
-          var nameOfCookie = name + "=";
-          var x = 0;
-          while (x <= document.cookie.length){
-              var y = (x + nameOfCookie.length);
-              if (document.cookie.substring(x, y) == nameOfCookie){
-              if ((endOfCookie = document.cookie.indexOf(";", y)) == -1){
-              endOfCookie = document.cookie.length;
-              }
-              return unescape (document.cookie.substring(y, endOfCookie));
-              }
-              x = document.cookie.indexOf (" ", x) + 1;
-              if (x == 0) break;
-          }
-          return "";
-      }
-      if (getCookie("popname") != "done"){
-    
-          var popOption = "width=400%, height=235%, resizable=no, scrollbars=no, status=no;";
-          window.open(popUrl,"",popOption);
-      }
-  }
-</script>
 </body>
 
 </html>
