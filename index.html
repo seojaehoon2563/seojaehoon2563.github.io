@@ -159,8 +159,13 @@
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
       <div class="w-100">
         <h2 class="mb-5">놀이터</h2>
-        <h3><a href="game.html">뱀 게임</a></h3>
-   
+        <h3>테트리스</h3>
+         <audio id="clearsound" src="sound/pop.ogg" preload="auto"></audio>
+        <canvas width='300' height='600'></canvas>
+        <button id="playbutton" onclick="playButtonClicked();">Play</button>
+        <script src='js/tetris.js'></script>
+        <script src='js/controller.js'></script>
+        <script src='js/render.js'></script>
       </div>
 
     </section>
@@ -209,24 +214,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
-  <script>
-     function add(char) {
-            var display = document.getElementById('display'); // 우리가 식을 입력할 input 태그를 불러옵니다.
-            // display.value는 input 태그 안에 들어 있는 값을 의미합니다.
-            display.value = display.value + char;
-            // display.value += char; 로 쓸 수도 있습니다.
-            // input 태그의 값 뒤에 char 문자를 추가해 주는 역할을 합니다.
-        }
-        function calculate() {
-            var display = document.getElementById('display');
-            var result = eval(display.value); // 식을 계산하고 result 변수에 저장합니다.
-            document.getElementById('result').value = result;
-        }
-        function reset() {
-            document.getElementById('display').value = "";
-            document.getElementById('result').value = "";
-        }
-  </script>
+ 
 </body>
 
 </html>
