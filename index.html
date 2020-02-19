@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+  <meta http-equiv=Content-Type content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="lib/prototype.js"></script>
+		<script type="text/javascript" src="src/dung.js"></script>
+		<script type="text/javascript">
+			Event.observe(window, "load", function() {
+				new DungGame("screen", 15, "score");
+			});
+		</script>
+		<link rel="stylesheet" media="screen" type="text/css" href="dung.css" />
+  
   <link rel="shortcut icon" href="/img/27750446_1757289147911238_5903040618479864194_n.jpg">
   <title>멋쟁이 사자처럼 - 서재훈</title>
   <!--Bootstrap core CSS -->
@@ -159,8 +169,10 @@
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
       <div class="w-100">
         <h2 class="mb-5">놀이터</h2>
-        <h3>테트리스</h3>
-        <iframe src="http://hooriza.com/sample/dung/dung.html" width="310" height="410" frameborder=0 border=0 marginwidth=0 marginheight=0 scrolling="no"></iframe>
+        <h3>똥피하기</h3>
+     <a href="#" id="screen" onclick="return false;"></a>
+		<input type="text" id="score" value="0" readonly="true" size="5">
+        
       </div>
 
     </section>
