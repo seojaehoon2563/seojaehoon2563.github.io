@@ -3,7 +3,7 @@ document.body.onkeydown = function( e ) {
         37: 'left',
         39: 'right',
         40: 'down',
-        262144: 'rotate',
+        65: 'rotate',
         32: 'drop'
     };
     if ( typeof keys[ e.keyCode ] != 'undefined' ) {
